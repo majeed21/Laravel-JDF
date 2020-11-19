@@ -7,18 +7,18 @@ It's a simple library to use Persian timestamps in Laravel ( 5.5+ / 6 / 7 )
 
 ### Install
 
-`composer require hatamiarash7/jdf`
+`composer require majeed21/jdf`
 
 Laravel 5.5+ has auto-discover ability and you don't need add anything to project's configuration
 
 ### How to use
 
 ```php
-use Hatamiarash7\JDF\Generator;
+use Majeed21\JDF\JDF;
 
 ...
 
-$jdf = new Generator();
+$jdf = new JDF();
 $date = $jdf->getTimestamp(); // Output : ۱۳۹۷/۱۱/۰۲ - ۰۰:۳۸
 
 $finalDate = $jdf->jdate_words(['ss'=>1390, 'mm'=>5, 'rr'=>20]);
@@ -28,17 +28,6 @@ $finalDate = $jdf->jdate_words(['ss'=>1390, 'mm'=>5, 'rr'=>20]);
 		'rr' => 'بیست'
 	    ]
 ```
-
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bgithub.com%2Fhatamiarash7%2FLaravel-JDF.svg?type=large)](https://app.fossa.io/projects/git%2Bgithub.com%2Fhatamiarash7%2FLaravel-JDF?ref=badge_large)
-
----
-
-## Support
-
-[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/D1D1WGU9)
-
-<div><a href="https://payping.ir/@hatamiarash7"><img src="https://cdn.payping.ir/statics/Payping-logo/Trust/blue.svg" height="128" width="128"></a></div>
 
 ## Contributing
 

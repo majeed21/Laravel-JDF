@@ -1,8 +1,8 @@
 <?php
 
-namespace Hatamiarash7\JDF;
+namespace Majeed21\JDFDate;
 
-class Generator
+class JDF
 {
     public function getTimestamp()
     {

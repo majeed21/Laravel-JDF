@@ -1,13 +1,13 @@
 {
-  "name": "hatamiarash7/jdf",
+  "name": "majeed21/jdf",
   "description": "JDF Library for Laravel",
   "type": "library",
   "license": "GPL-3.0",
   "authors": [
     {
-      "name": "Arash Hatami",
-      "email": "hatamiarash7@gmail.com",
-      "homepage": "https://github.com/hatamiarash7"
+      "name": "majeed mohammadian",
+      "email": "majeedmohammadian@gmail.com",
+      "homepage": "https://github.com/majeed21"
     }
   ],
   "minimum-stability": "stable",
@@ -21,7 +21,7 @@
   },
   "autoload": {
     "psr-4": {
-      "Hatamiarash7\\JDF\\": "src"
+      "Majeed21\\JDFDate\\": "src"
     },
     "classmap": [
       "src"
@@ -29,7 +29,7 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Hatamiarash7\\JDF\\Test\\": "tests"
+      "Majeed21\\JDFDate\\Test\\": "tests"
     }
   },
   "suggest": {
@@ -39,7 +39,7 @@
   "extra": {
     "laravel": {
       "providers": [
-        "Hatamiarash7\\JDF\\JDFServiceProvider"
+        "Majeed21\\JDFDate\\JDFServiceProvider"
       ]
     }
   },
@@ -48,6 +48,6 @@
     "optimize-autoloader": true
   },
   "support": {
-    "issues": "https://github.com/hatamiarash7/Laravel-JDF/issues"
+    "issues": "https://github.com/majeed21/Laravel-JDF/issues"
   }
 }

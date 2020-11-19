@@ -31,15 +31,15 @@ class Generator
         $persian = $this->getCDate($this->getCurrentTime()) . ' ' . $this->getCTime($this->getCurrentTime());
         return explode(' ', $persian)[0];
     }
-
-    private function getCurrentTime()
+    
+    public function getCurrentTime()
     {
         $now  = date("Y-m-d", time());
         $time = date("H:i:s", time());
         return $now . ' ' . $time;
     }
-
-    private function getCDate($date)
+    
+    public function getCDate($date)
     {
         $now                          = explode(' ', $date)[0];
         $time                         = explode(' ', $date)[1];
@@ -49,8 +49,8 @@ class Generator
         $date                         = $this->jDate("Y/m/d", $timestamp);
         return $date;
     }
-
-    private function getCTime($date)
+    
+    public function getCTime($date)
     {
         $now                          = explode(' ', $date)[0];
         $time                         = explode(' ', $date)[1];
@@ -67,8 +67,8 @@ class Generator
         $date = $this->jalali_to_gregorian($date[0], $date[1], $date[2]);
         return implode('/', $date);
     }
-
-    private function jdate($format, $timestamp = '', $time_zone = 'Asia/Tehran', $tr_num = 'fa')
+    
+    public function jdate($format, $timestamp = '', $time_zone = 'Asia/Tehran', $tr_num = 'fa')
     {
         $T_sec = 0;
 
@@ -246,8 +246,8 @@ class Generator
         }
         return ($tr_num != 'en') ? $this->tr_num($out, 'fa', '.') : $out;
     }
-
-    private function tr_num($str, $mod = 'en', $mf = '٫')
+    
+    public function tr_num($str, $mod = 'en', $mf = '٫')
     {
         $num_a = array('0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '.');
         $key_a = array('۰', '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', $mf);
@@ -319,8 +319,8 @@ class Generator
         }
         return ($mod === '') ? $array : implode($mod, $array);
     }
-
-    private function gregorian_to_jalali($gy, $gm, $gd, $mod = '')
+    
+    public function gregorian_to_jalali($gy, $gm, $gd, $mod = '')
     {
         list($gy, $gm, $gd) = explode('_', $this->tr_num($gy . '_' . $gm . '_' . $gd)); /* <= Extra :اين سطر ، جزء تابع اصلي نيست */
         $g_d_m              = array(0, 31, 59, 90, 120, 151, 181, 212, 243, 273, 304, 334);
@@ -350,8 +350,8 @@ class Generator
         }
         return ($mod === '') ? array($jy, $jm, $jd) : $jy . $mod . $jm . $mod . $jd;
     }
-
-    private function jalali_to_gregorian($jy, $jm, $jd, $mod = '')
+    
+    public function jalali_to_gregorian($jy, $jm, $jd, $mod = '')
     {
         list($jy, $jm, $jd) = explode('_', $this->tr_num($jy . '_' . $jm . '_' . $jd));
         if ($jy > 979) {
